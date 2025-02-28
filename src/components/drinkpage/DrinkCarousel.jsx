@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import { Button } from '@heroui/react';
 
-function Carousel() {
+function DrinkCarousel() {
 
         const CarouselData = [
           {
             id: 1,
-            image: "/slider.png",
-            heading: "Wizkid made in lagos tour",
+            image: "/DrinkCarosel.png",
+            heading: "GTCO Food and Drink Festival 2022: Africa’s Biggest Food and Drink Festival",
             des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
           },
           {
@@ -69,7 +69,7 @@ function Carousel() {
   return (
     <>
     <section className='overflow-hidden p-12'>
-        <h1 className='text-center text-2xl lg:text-5xl text-[#26395C] mt-24 mb-12 font-semibold'>See How People are Chilling On Chillsbay</h1>
+        
 
         <div className='relative w-full max-w-screen-2xl mx-auto'>
             <div className='flex items-center justify-between'>
@@ -81,12 +81,12 @@ function Carousel() {
 
                 <div className='flex flex-col lg:flex-row items-center gap-6 w-full px-12'>
                     <div className='w-full lg:w-1/2'>
-                        <h3 className='text-3xl font-semibold text-[#26395C] lg:ms-10 text-center lg:text-start'> Upcoming events this weekend</h3>
+                        <h3 className='text-3xl font-semibold text-[#26395C] lg:ms-10 text-center lg:text-start'> Upcoming Eat & Drink Events</h3>
                         <img className='object-cover w-full h-auto' src={currentSlider.image} alt="" />
                     </div>
 
                     <div className='w-full lg:w-1/2 flex flex-col gap-4'>
-                        <h2 className='text-2xl lg:text-5xl font-bold lg:w-[80%] leading-tight'>{currentSlider.heading}</h2>
+                        <h2 className='text-2xl lg:text-5xl font-bold lg:w-[85%] leading-tight'>{currentSlider.heading}</h2>
                         <p className='text-gray-700 lg:w-[70%] text-xl'>{currentSlider.des}</p>
 
                         <div className='grid grid-cols-2 lg:w-[60%]'>
@@ -133,4 +133,4 @@ function Carousel() {
   )
 }
 
-export default Carousel;
+export default DrinkCarousel;
