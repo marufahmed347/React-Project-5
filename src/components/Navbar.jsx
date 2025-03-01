@@ -67,7 +67,7 @@ function MyNavbar() {
             </NavbarItem>
 
             <NavbarItem>
-                <img src="shoping.png" alt="" />
+                <NavLink to='/payment'><img src="shoping.png" alt="" /></NavLink>
             </NavbarItem>
 
             <NavbarItem>
