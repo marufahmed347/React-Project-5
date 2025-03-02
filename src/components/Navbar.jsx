@@ -75,7 +75,11 @@ function MyNavbar() {
             </NavbarItem>
 
             <NavbarItem>
-                <Button color='primary'>Contact Now</Button>
+                <NavLink to='/contact'>
+                <button className="bg-blue-600 px-3 py-1.5 rounded-xl text-white font-semibold">
+                Contact Now
+                </button>
+                </NavLink>
             </NavbarItem>
 
         </NavbarContent>
