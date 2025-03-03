@@ -4,22 +4,22 @@ import { Dropdown,DropdownTrigger,DropdownMenu,DropdownItem,Button } from '@hero
 import { NavLink } from 'react-router-dom';
 import MyModal from './homepage/Modal';
 import ProfileDropDown from './homepage/Dropdown';
+import { themeColor } from '../lib/Utils';
+import { ShopingIcon } from './Icon';
 
 
 const value = true;
 
-function MyNavbar() {
+const MyNavbar = ({isDark}) => {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const menuitems = ['Eat & Drink','Club','Things to do','Shoping','Account','Contact']
 
   return (
-    <>
-    <Navbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen} maxWidth='2xl'>
-        <NavbarContent className='sm:hidden' justify='start'>
-            <NavbarMenuToggle aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}>
 
-            </NavbarMenuToggle>
+    <Navbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen} maxWidth='2xl' className={themeColor(isDark)}>
+        <NavbarContent className='sm:hidden' justify='start'>
+            <NavbarMenuToggle aria-label={isMenuOpen ? 'Close menu' : 'Open menu'} />
         </NavbarContent>
 
         <NavbarContent className='sm:hidden pr-3'>
@@ -38,23 +38,29 @@ function MyNavbar() {
             </NavbarBrand>
 
             <NavbarItem>
-                <NavLink to='/drink' className='text-black' style={({ isActive }) => ({
-                color: isActive ? "#0E8BFF" : "black",
-                })}>Eat & drink</NavLink>
+                <NavLink to='/drink' className={isDark ? "text-white" : "text-black"} 
+                style={({ isActive }) => ({
+                color: isActive ? "#0E8BFF" : isDark ? "white" : "black",
+                })}>
+                    Eat & drink
+                </NavLink>
             </NavbarItem>
 
             <NavbarItem>
-                <NavLink to='/club' style={({ isActive }) => ({
-                color: isActive ? "#0E8BFF" : "black",
-                })} >Club <sup className='text-[8px] px-2'>+HOT</sup></NavLink>
+                <NavLink to='/club'
+                style={({ isActive }) => ({
+                    color: isActive ? "#0E8BFF" : isDark ? "white" : "black",
+                })}>
+                    Club <sup className='text-[8px] px-2'>+HOT</sup>
+                </NavLink>
             </NavbarItem>
 
             <NavbarItem>
-                <Dropdown>
+                <Dropdown className={isDark ? "bg-slate-800 text-white" : ""}>
                     <DropdownTrigger>
-                        <Button variant='none'>Things to do <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4 text-blue-500">
+                        <Button variant='none'>Things to do{" "}<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4 text-blue-500">
                         <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                        </svg>
+                        </svg> {" "}
                         </Button>
                     </DropdownTrigger>
                     <DropdownMenu aria-label='Example with disabled actions'>
@@ -67,11 +73,13 @@ function MyNavbar() {
             </NavbarItem>
 
             <NavbarItem>
-                <NavLink to='/payment'><img src="shoping.png" alt="" /></NavLink>
+                <Link className="foreground">
+                <NavLink to='/payment'><ShopingIcon isDark={isDark} /></NavLink>
+                </Link>
             </NavbarItem>
 
             <NavbarItem>
-                {value === true ? <MyModal/> : <ProfileDropDown/>}
+                {value === true ? <MyModal isDark={isDark} /> : <ProfileDropDown/>}
             </NavbarItem>
 
             <NavbarItem>
@@ -104,7 +112,6 @@ function MyNavbar() {
 
 
     </Navbar>
-    </>
   )
 }
 

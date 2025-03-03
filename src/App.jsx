@@ -7,24 +7,25 @@ import DrinkPage from './components/drinkpage/Drink';
 import ClubPage from './components/clubpage/club';
 import Payment from './components/paymentpage/Payment';
 import Contact from './components/contactpage/Contact';
+import { Warper } from './components/common/Warper';
 
 
-function App() {
+const App = () => {
 
   return (
     <>
       <Router>
-        <MyNavbar/>
+        {/* <MyNavbar/> */}
 
         <Routes>
-          <Route path='/' element={<HomePage/>}></Route>
-          <Route path='/drink' element={<DrinkPage/>}></Route>
-          <Route path='/club' element={<ClubPage/>}></Route>
-          <Route path='/payment' element={<Payment/>}></Route>
-          <Route path='/contact' element={<Contact/>}></Route>
+          <Route path='/' element={<Warper><HomePage/></Warper>}></Route>
+          <Route path='/drink' element={<Warper><DrinkPage/></Warper>}></Route>
+          <Route path='/club' element={<Warper isDark><ClubPage/></Warper>}></Route>
+          <Route path='/payment' element={<Warper><Payment/></Warper>}></Route>
+          <Route path='/contact' element={<Warper><Contact/></Warper>}></Route>
         </Routes>
 
-        <Footer/>
+        {/* <Footer/> */}
       </Router>
     </>
   )
