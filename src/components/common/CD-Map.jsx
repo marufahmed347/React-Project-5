@@ -1,9 +1,10 @@
 import React from 'react'
+import { cn } from '@heroui/react'
 
-function Map() {
+const Map = ({isDark}) => {
   return (
     <>
-    <section className='bg-[#F5FAFF] p-10'>
+    <section className={cn("bg-[#F5FAFF] p-10 ", isDark && "bg-black")}>
         <div className='w-[100%] mx-auto'>
             <img className='w-full object-cover rounded-lg' src="map.png" alt="" />
         </div>
