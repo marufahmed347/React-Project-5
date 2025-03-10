@@ -4,7 +4,7 @@ import { Autocomplete,AutocompleteItem,Button } from '@heroui/react'
 function Hero() {
   return (
     <>
-    <section className='bg-[url("./hero.png")] w-full h-[80vh] bg-no-repeat bg-cover mt-4 overflow-hidden mx-auto'>
+    <section className='bg-[url("/hero.png")] w-full h-[80vh] bg-no-repeat bg-cover mt-4 overflow-hidden mx-auto'>
         <div className='container w-[80%] mx-auto mt-10'>
             <h1 className='text-2xl lg:text-5xl w-full lg:w-[55%] font-bold py-5 px-5 lg:py-10 lg:px-10 mt-[18px] lg:mt-[30px] leading-tight text-white text-center lg:text-start'>Find amazing things to do anytime, anywhere in Lagos.</h1>
 
