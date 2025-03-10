@@ -29,7 +29,7 @@ const MyModal = ({isDark}) => {
                 <ModalBody className='px-0 py-0'>
                     <div className="flex flex-col md:flex-row w-full h-full md:max-h-[90vh] overflow-y-auto md:overflow-visible">
                         {/* left side */}
-                        <div className='bg-[url("LoginImg.png")] bg-cover bg-no-repeat bg-center flex flex-col text-white w-full md:w-1/3 p-8'>
+                        <div className='bg-[url("/LoginImg.png")] bg-cover bg-no-repeat bg-center flex flex-col text-white w-full md:w-1/3 p-8'>
                             <h3 className='text-4xl font-bold mb-5 text-start mt-10'>Sing Up</h3>
                             <p className='text-sm'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tellus ullamcorper hendrerit quis purus pellentesque. Ac sagittis, convallis non tincidunt interdum eu nullam aliquam maecenas. Enim sed tortor morbi ut suspendisse.{" "}</p>
                         </div>
