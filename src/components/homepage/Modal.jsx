@@ -80,9 +80,10 @@ const MyModal = ({isDark}) => {
                                 <p className='text-sm mt-2 text-center'>
                                 By creating an account, you agree to our{" "}
                                     <a href="" className='text-blue-500'>Terms & Conditions</a>
-                                    <a href=""></a>{" "}
+                                    {" "}
                                     and{" "}
                                     <a href="" className='text-blue-500'>Privacy Policy</a>
+                                    
                                 </p>
                             </form>
                         </div>
