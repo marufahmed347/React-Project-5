@@ -2,7 +2,7 @@ import './App.css'
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import HomePage from './components/homepage/Index'
 import DrinkPage from './components/drinkpage/Drink';
-import ClubPage from './components/clubpage/club';
+import ClubPage from './components/clubpage/Club'
 import Payment from './components/paymentpage/Payment';
 import Contact from './components/contactpage/Contact';
 import { Warper } from './components/common/Warper';

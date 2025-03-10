@@ -73,9 +73,9 @@ const MyNavbar = ({isDark}) => {
             </NavbarItem>
 
             <NavbarItem>
-                <Link className="foreground">
+                
                 <NavLink to='/payment'><ShopingIcon isDark={isDark} /></NavLink>
-                </Link>
+                
             </NavbarItem>
 
             <NavbarItem>
