@@ -101,7 +101,7 @@ const Carousel = ({isDark, data, tags}) => {
         </div>
     </section>
     </>
-  )
+  )  
 }
 
 export default Carousel;
